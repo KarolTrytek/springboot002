@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title th:text="${title}"></title>
+    <!--/*/ <th:block th:include="fragments/general.html :: headerfiles"/>  /*/-->
+</head>
+<body>
+<div class="container">
+<h3>User id: <span th:text="${user.id}"></span> </h3>
+<div>
+    <p>Name: <span th:text="${user.name}"/> </p>
+    <p>Surename: <span th:text="${user.surname}"/> </p>
+    <p>Email: <span th:text="${user.email}"/> </p>
+    <p>City: <span th:text="${user.city}"/> </p>
+</div>
+</div>
+<div th:replace="fragments/language.html :: language"/>
+<footer th:replace="fragments/general.html::footer(company='example.com',year='12')"></footer>
+</body>
+</html>
